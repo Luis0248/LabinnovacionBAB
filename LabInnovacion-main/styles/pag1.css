@@ -1,0 +1,127 @@
+:root{
+    --word-font: 'Rubik', sans-serif;
+    --background-color: white;
+    --theme-color: #1E5DA9;
+    --header-color: #132A4C; 
+    --tittle-color: black;
+    --text-color: black;
+    --btn-color: rgb(207, 206, 205);
+}
+
+a{
+    color: rgb(225, 225, 225);
+    text-decoration: none;
+}
+.principal-text-1{
+    text-align: center;
+    font-size: 22px;
+    padding: 0 100px;
+    margin: 70px 70px 60px 70px;
+}
+.second-info-1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--theme-color);
+        padding-bottom: -20px;
+        
+
+}
+.wave{
+    display: flex;
+    top: -10px
+}
+
+
+.wave_bottom{
+    top: -2px
+}
+
+.temas-1{
+    text-align: left;
+    margin-left: 20%;
+    font-size: 40px;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.list-container-1{
+    font-family: var(--word-font);
+    font-size: 24px;
+    margin-left: -24px;
+    color: antiquewhite;
+}
+.info-item-1{
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+}
+
+.text-item-1{
+    width: 550px;
+    margin-bottom: 50px;
+}
+
+.principal-img-1{
+    margin-top: 6%;
+    display: flex;
+    width:34%;
+    margin-bottom: 50px;
+}
+.contact-tittle{
+    text-align: center;
+    text-decoration: none;
+}
+.contact-text{
+    text-align: center;
+    font-size: 25px;
+    margin: 70px 70px 60px 70px;
+}
+.btn-wst{
+    width: 8%;
+    margin-left: 32%;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px black;
+}
+.btn-mail{
+    width: 8%;
+    margin-left: 18%;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px black;
+}
+@media (max-width: 768px) {
+    .principal-text-1{
+        padding: 0 2px;
+    }
+    .temas-1{
+        text-align: center;
+    }
+    .text-item-1{
+        width: 300px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+    }
+    .principal-img-1{
+        margin-top: 6%;
+        width: 34%;
+        margin-bottom: -500px;
+        margin-left: -370px;
+    }
+    .second-info-1{
+        padding-bottom: 20px;
+    }
+    .list-container-1{
+        font-size: 15px;
+        margin-right: 10px;
+        padding: 2px 3px 200px 1px;
+    }
+    .btn-wst{
+        width: 20%;
+        margin-left: 2%;
+    }
+    .btn-mail{
+        width: 20%;
+        margin-left: 18%;
+    }
+    
+}

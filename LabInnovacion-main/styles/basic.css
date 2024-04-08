@@ -1,0 +1,374 @@
+/*Variables universales en el código*/
+
+:root{
+    --background-color: white;
+    --header-color: white/*#132A4C*/; 
+    --tittle-color: white;
+    --text-color: aliceblue;
+    --word-font: 'Rubik', sans-serif;
+
+}
+
+/* se declara para que la página baje suavemente al seleccionar una opción del menú*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*general del header*/
+.header{
+    z-index: 50; /*para manejar la capa, entre menor sea el numero mas atras de las capas está*/
+    background: #5987BF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.637);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0PX;
+
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    padding:8px;
+    max-width: 990PX;
+    margin: 0 auto;
+    /*align-items: center;
+    width: 100vw;
+    height: 5px; 
+    padding: 5vh 3vw 5vh 3vw; */ 
+}
+
+/*logo*/
+
+/*.header-logo{
+    display: flex;
+    align-items: center;
+}*/
+
+.header-icon{
+    width: 40%;
+    display: flex;
+    min-width: 80px;
+    height: fit-content;
+    border-radius: 10px;
+}
+
+
+/*Menu*/
+a{
+    color: rgb(255, 255, 255); /*var(--text-color)*/;
+    text-decoration: none;
+
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    margin:10px 0px 0px 0px;
+    padding: 0;
+}
+
+.menu li{
+    color:white;
+    font-family: var(--word-font);
+    padding: 18px 15px 15px 15px;
+    font-size: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+
+}
+
+.menu li::before{
+    content: "";
+    background-color: rgba(#1F67A6)/*#D92938*//*#D90D32*/;
+    position: absolute;
+    top: 63%;
+    width: 10%;
+    height: 3px;
+    opacity: 0;
+}
+
+
+/*.menu a.select1::after,*/
+.menu li:hover::before{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.menu a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #D92938;
+    transition: width 0.3s ease;
+}
+.menu a:hover::after{
+    width: 100%;
+}
+
+.open-menu-btn, .close-menu-btn{
+    display: none;
+}
+
+/*textos*/
+h1{
+    margin-left: 20px;
+    font-family:'Rubik', sans-serif;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p{
+    font-family: var(--word-font);
+    text-align: center;
+    margin-left:4%;
+    margin-right:4%;
+}
+
+
+
+h2{
+    font-size: 40px;
+    font-family: var(--word-font);
+    text-decoration:underline;
+    font-style: italic;
+}
+
+/*footer*/
+
+footer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0; 
+    padding: 20px;
+    background-color: var(--header-color);
+    flex-direction: column;
+}
+
+
+
+.footer-link-banco, .footer-link-uni{
+    height: 100px;
+    
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+
+.siguenos-text{
+    position: relative;
+    text-align: right;
+    left: -200px;
+    color: antiquewhite;
+    font-family: var(--word-font);
+    bottom: 280px;
+}
+.contact{
+    position: relative;
+    color: antiquewhite;
+    font-family: var(--word-font);
+    bottom: 240px;
+    right: 12pc;
+}
+.social-icon-container, .footer-menu-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/*redes sociales del footer*/
+.social-icon-fb{
+    width: 75px;
+    border-radius: 50px;
+    filter: invert(100%);
+    position: relative;
+    left: 68%;
+    bottom: 280px;
+}
+.social-icon-ig{
+    width: 75px;
+    border-radius: 50px;
+    filter: invert(100%);
+    position: relative;
+    left: 68.5%;
+    bottom: 280px;
+}
+.social-icon-tw{
+    width: 99px;
+    border-radius: 50px;
+    filter: invert(100%);
+    position: relative;
+    left: 68%;
+    bottom: 269px;
+}
+.social-icon-tk{
+    width: 80px;
+    border-radius: 50px;
+    filter: invert(100%);
+    position: relative;
+    left: 68%;
+    bottom: 277px;
+}
+
+
+.footer-menu-container{
+    color: white;
+    font-family: var(--word-font);
+    bottom: 380px;
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    left: 30pc;
+    margin: 0 auto;
+}
+
+.footer-item{
+    margin-bottom: 20px;
+    margin-left:-190px ;
+    justify-content: space-between;
+    list-style: none;
+}
+
+li.footer-item.politic:hover{
+    color:#5987BF;
+    text-decoration: underline;
+}
+
+/* medidas de ipad*/
+
+@media (max-width: 768px) {
+
+    .contactanos-text{
+        margin-left: 260px;
+    }
+    .footer-item{
+        margin-left: -300px;
+        margin-top: 30px;
+    }
+    .social-icon-fb{
+        width: 9%;
+        bottom: 30px;
+        margin-left: -70px;
+    }
+    .social-icon-ig{
+        width: 9%;
+        bottom: 30px;
+        margin-left: -1px;
+    }
+    .social-icon-tw{
+        width: 11.5%;
+        bottom: 26px;
+        margin-left: -2px;
+    }
+    .social-icon-tk{
+        width: 9%;
+        bottom: 30px;
+        margin-left: -6px;
+    }
+    .contactanos-text{
+        margin-left: 400px;
+        font-size: 17px;
+        margin-top: 60px;
+    }
+    .siguenos-text{
+        text-align: right;
+        bottom: 20px;
+        left: -40px;
+    }
+    a.header-logo{
+        width: 100px;
+        height: auto;
+    }
+    .menu li{
+        font-size: 18px;
+        padding: 10px 0.5px 32px 8px;
+    }
+    .nav-header{
+        justify-content:left ;
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    .footer-link-banco, .footer-link-uni{
+        width: 15%;
+        height: 20%;
+        margin-left: 0%;
+    }
+    .footer-item{
+        font-size: 10px;
+    }
+
+}
+/*
+@media(max-width:950px){
+
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left:0;
+        top:0;
+        width: 100%;
+        align-items:center;
+        background-color: rgba(23, 54, 36, 0.514);
+        height: 100%;
+    }
+    .menu li{
+    padding:0;
+    }
+    .menu a{
+        line-height: 60px;
+    }
+
+    .open-menu-btn, .close-menu-btn{
+        display:block;
+        width: 20px;
+        height: 20px;
+        filter: invert(100%);
+        
+    }
+    .close-menu-btn{
+        align-self: flex-end;
+    }
+    
+}*/
+
+
+/*
+li{
+    color:var(--tittle-color);
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    padding-left: -2%;
+    font-size: 120%;
+}
+#lista1{
+   padding-right: 0%;
+   padding-left: 25%;
+}
+
+#lista2{
+    padding-right: 50%;
+}*/
+
+
+@media only screen and (max-width:500px){
+    btn-wst,
+    btn-mail{
+        width: 20%;
+        margin-left: 40%;
+    }
+    
+}
